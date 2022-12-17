@@ -1,0 +1,33 @@
+ version: "3.2"
+ 
+ services:
+ 
+  accounts:
+    image: hitesh791/accounts:latest
+    mem_limit: 700m
+    ports: 
+     - "8080:8080"
+    networks:
+     - hitesh791-network
+     
+     
+  cards:
+    image: hitesh791/cards:latest   
+    mem_limit: 700m
+    ports:
+     - "9001:9001"
+    networks:
+     - hitesh791-network
+     
+  loans: 
+    image: hitesh791/loans:latest
+    mem_limit: 700m
+    ports:
+     - "8090:8090"
+    networks:
+     - hitesh791-network
+     
+ networks:
+    hitesh791-network:     
+         
+        
